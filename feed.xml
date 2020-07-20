@@ -1,1 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-19T23:58:41+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Site Title</title><subtitle>An amazing website.</subtitle><author><name>Xiang Chen</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-22T11:33:05+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Continuous Learning and Sharing</title><subtitle>A blog site for continuous learning and sharing.</subtitle><author><name>Xiang Chen</name></author><entry><title type="html">Clean Coder Review Professionalism</title><link href="http://localhost:4000/Clean-Coder-Review-Professionalism/" rel="alternate" type="text/html" title="Clean Coder Review Professionalism" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>http://localhost:4000/Clean-Coder-Review-Professionalism</id><content type="html" xml:base="http://localhost:4000/Clean-Coder-Review-Professionalism/">&lt;p&gt;I recently read this book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programmers.&lt;/p&gt;
+
+&lt;p&gt;To me, the experience of reading this book is quite special, I felt being taken under the wings and mentored throughout the book.&lt;/p&gt;
+
+&lt;p&gt;The author, who is also known as Uncle Bob, has shared his 42 years experience of being a professional developer, manager, and even CEO, witnessing the things changed and the things not changed so much.&lt;/p&gt;
+
+&lt;p&gt;He has been willing to share a lot of painful dark histories that he has been through, such as being fired, creating nasty disaster defects, completely losing work life balance etc.&lt;/p&gt;
+
+&lt;p&gt;I’m quite grateful to being able to take the share of his wisdom, and this is driving me to also share some experience or lessons I’ve learned since I stepped into the Professional Service world five years ago.&lt;/p&gt;
+
+&lt;p&gt;I’ve organized a BBL within my previous organization for this, and as part of it I’d like to write a blog post  and hope someone can benefit from it too.&lt;/p&gt;
+
+&lt;p&gt;This post only covers the first chapter, and is in a format of book notes. Please get the book and find out more if you are interested.&lt;/p&gt;
+
+&lt;h1 id=&quot;professionalism&quot;&gt;Professionalism&lt;/h1&gt;
+
+&lt;h2 id=&quot;not-everyone-can-be-called-professional-be-careful-what-you-ask-for&quot;&gt;&lt;em&gt;Not everyone can be called professional, be careful what you ask for.&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Not everyone who can put code together and make it “work” can be called professional.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Take Responsibility&lt;/strong&gt; 
+ In this section, Uncle Bob has shared experience he had, that he once had to ship something not fully tested due to time pressure, and caused severe impact on the customer.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;He only tested his new features, but didn’t fully regression test the other part of the system where he believed things should be fine. And guess what, Murphy’s law shined again.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The system is done as soon as his new feature rolled out, and customers are losing tons of critical data for one day and had roll back the system. His manager was roasted on constant phone from the customer.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;He was not sure how long he needed to fix the error etc, and on the other end the rolled back feature is also critical, well you know the rest…&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;*He confessed that he only cared about his reputation and should have told the PM that the delivery is not fully tested and see if the date can be pushed till the tests are fully done, and that was an irresponsible behavior for the shipment quality.&lt;/p&gt;
+
+&lt;p&gt;I totally have been in the same scenarios,*&lt;/p&gt;
+
+&lt;p&gt;“Just commit it, we can make it pretty later!”&lt;/p&gt;
+
+&lt;p&gt;“The tests failed, but it’s not related to my changes, can we merged it?”&lt;/p&gt;
+
+&lt;p&gt;“Let’s just develop it and test the happy path, QA can test and let us know if any issue later”. 
+ It’s quite tempted for developers to take shortcut to a workable software, and skip certain tedious steps, such as testing, documentation, I have to confess I’m one of them.&lt;/p&gt;
+
+&lt;p&gt;As a client facing consultant we’ll always face even more pressure from the project, customer, so the temptation is huge and this won’t be easy, and who said this will be easy?&lt;/p&gt;
+
+&lt;p&gt;There are probably related topics jumping in our head to aid this kind of issues, like Definition of Done, Acceptance Criteria etc, but these are process related and can be passively enforced onto an individual.&lt;/p&gt;
+
+&lt;p&gt;Here we are trying to talk about people.&lt;/p&gt;
+
+&lt;p&gt;As per the first value of Agile Manifesto, that People over Process and Tools, that without People having the right mindset, the process can be tilted when facing difficulties.&lt;/p&gt;
+
+&lt;p&gt;So as a professional, the mindset should be to extend our responsibility to a higher level, e.g.:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Responsible to the function –     make it work (probably too obvious);&lt;/li&gt;
+  &lt;li&gt;Responsible to the developers     who is going to maintain our code – easy to read, change and upgrade;&lt;/li&gt;
+  &lt;li&gt;Responsible to the QA who is     going to test our code - well unit tested, behavior tested, documented and     communicated;&lt;/li&gt;
+  &lt;li&gt;Responsible to the Build     Engineer who is going to deploy your code – design our code easy to be     deployed, loosely coupled components, avoid unnecessary deployment by     making the feature configurable;&lt;/li&gt;
+  &lt;li&gt;Responsible to the Sustaining     Engineer who is going to jump on Midnight calls if our code causes     defects;&lt;/li&gt;
+  &lt;li&gt;Responsible to the End User     who is going to use our code – Bear in mind this feature could be a big     impact to a lot of people’s daily life;&lt;/li&gt;
+  &lt;li&gt;Responsible to the Customer     who is trying to be profitable with our code – Don’t make them lose     business because of service unavailable or defects.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xiang Chen</name></author><summary type="html">I recently read this book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programmers.</summary></entry></feed>

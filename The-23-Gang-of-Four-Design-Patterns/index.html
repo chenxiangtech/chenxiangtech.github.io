@@ -1,0 +1,617 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.3 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>The 23 Gang Of Four Design Patterns - Continuous Learning and Sharing</title>
+<meta name="description" content="Work In Progress">
+
+
+  <meta name="author" content="Xiang Chen">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Continuous Learning and Sharing">
+<meta property="og:title" content="The 23 Gang Of Four Design Patterns">
+<meta property="og:url" content="https://chenxiangtech.github.io/The-23-Gang-of-Four-Design-Patterns/">
+
+
+  <meta property="og:description" content="Work In Progress">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-07-22T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://chenxiangtech.github.io/The-23-Gang-of-Four-Design-Patterns/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Xiang Chen",
+      "url": "https://chenxiangtech.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Continuous Learning and Sharing Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Continuous Learning and Sharing
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/profile_pic.jpeg" alt="Xiang Chen" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Xiang Chen</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Full Stack Software Engineer, Consulting Lead, Certified Scrum Master, Career Coach</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Dublin, Shenzhen</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:chenxiang1984@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/xiang-chen-05161924/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span></a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://twitter.com/gnaixnehc" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="The 23 Gang Of Four Design Patterns">
+    <meta itemprop="description" content="Work In Progress">
+    <meta itemprop="datePublished" content="2020-07-22T00:00:00+01:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">The 23 Gang Of Four Design Patterns
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> The 23 GoF Design Patterns</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#creational-design-pattern">Creational Design Pattern</a>
+    <ul>
+      <li><a href="#singleton">Singleton</a></li>
+      <li><a href="#factory">Factory</a></li>
+      <li><a href="#abstract-factory">Abstract Factory</a></li>
+      <li><a href="#builder">Builder</a></li>
+      <li><a href="#prototype">Prototype</a></li>
+    </ul>
+  </li>
+  <li><a href="#structural-design-pattern">Structural Design Pattern</a>
+    <ul>
+      <li><a href="#adapter">Adapter</a></li>
+      <li><a href="#bridge">Bridge</a></li>
+      <li><a href="#composite">Composite</a></li>
+      <li><a href="#decorator">Decorator</a></li>
+      <li><a href="#proxy">Proxy</a></li>
+      <li><a href="#facade">Facade</a></li>
+      <li><a href="#flyweight">Flyweight</a></li>
+    </ul>
+  </li>
+  <li><a href="#behavioral-design-pattern">Behavioral Design Pattern</a>
+    <ul>
+      <li><a href="#mediator">Mediator</a></li>
+      <li><a href="#memento">Memento</a></li>
+      <li><a href="#intepretor">Intepretor</a></li>
+      <li><a href="#iterator">Iterator</a></li>
+      <li><a href="#strategy">Strategy</a></li>
+      <li><a href="#state">State</a></li>
+      <li><a href="#chain-of-responsibility">Chain of Responsibility</a></li>
+      <li><a href="#command">Command</a></li>
+      <li><a href="#visitor">Visitor</a></li>
+      <li><a href="#observer">Observer</a></li>
+      <li><a href="#template-methods">Template Methods</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p><code class="language-plaintext highlighter-rouge">Work In Progress</code></p>
+
+<p>The 23 Gang of Four Design Patterns have been refered as must known for every technical professional.</p>
+
+<p>I’m going to document my understanding on these patterns, as I notice that for some of them there might be different interpretations which all make good sense.</p>
+
+<p>So the goal is not to resolve the differences, but to gain a good knowledge from a common and high level.</p>
+
+<p>This is not a purely academic article, that I’m also adding some notes or thoughts along the way, so be alerted if you are just looking for a wiki.</p>
+
+<p>I’m also sharing some tips about how I memorises these patterns, such as <code class="language-plaintext highlighter-rouge">ABCD+PFF</code> and <code class="language-plaintext highlighter-rouge">2*MISC + VOT</code></p>
+
+<h1 id="creational-design-pattern">Creational Design Pattern</h1>
+
+<p>There are five of them:</p>
+
+<h2 id="singleton">Singleton</h2>
+
+<p><code class="language-plaintext highlighter-rouge">Singleton</code> probably is the most referred, implemented or mentioned design pattern.</p>
+
+<p>If I find a a good candidate in my interview, I’d like to ask him or her to implement a Singleton from scratch, as it’s testing some basic Java knowledge such a private constructor, or you can dig deeper towards multithreading such as synchoronized and volatile etc.</p>
+
+<p>Here is an example with basic implementation:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Singleton</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="nc">Singleton</span> <span class="n">_instance</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  
+  <span class="c1">// Private constructor makes sure it cannot be instantiated anywhere else</span>
+  <span class="kd">private</span> <span class="nf">Singleton</span> <span class="o">()</span> <span class="o">{}</span>
+  
+  <span class="c1">//Lazy loading</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Singleton</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">_instance</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">_instance</span>  <span class="o">=</span> <span class="k">new</span> <span class="nc">Singleton</span><span class="o">();</span>
+    
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">_instance</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>There will be problems if the code above is running in multi-threading environments.</p>
+
+<p>So Double Checked Locking is introduce:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Singleton</span> <span class="o">{</span>
+  <span class="cm">/* The usage of volatile:
+   1. Provide Data visiblity between threads;
+   2. When CPU executes the instructions, JVM will utilize memory fence around this object and making sure there is no reordering of instructions which may lead to partially initizliaed object.
+   */</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">volatile</span> <span class="nc">Singleton</span> <span class="n">_instance</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  
+  <span class="kd">private</span> <span class="nf">Singleton</span><span class="o">()</span> <span class="o">{}</span>
+  
+  <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Singleton</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Double Checked Locking</span>
+    <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">_instance</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// 1. Check if it's initialized, no need to synchrozied at this step</span>
+      <span class="kd">synchronized</span><span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">_instance</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// 2. After obtaining the lock, check again, and make sure it's not initizlied by other thread in between the previous steps.</span>
+          <span class="k">this</span><span class="o">.</span><span class="na">_instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Singleton</span><span class="o">();</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">_instance</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>There are other implementations on this, but I probably will just summarize that the purpose of singleton is to make sure only one instance of an object exists in the run time system, to save resource.</p>
+
+<p>Some example of usage in the real life:</p>
+
+<p>In the Spring framework, there is a famous container called the Inversion of Control.</p>
+
+<p>By default, a bean managed by the container is instantiated as a singleton instance, if not specified otherwise.</p>
+
+<blockquote>
+  <p><strong>A side note</strong></p>
+
+  <p>I once interviewed a senior developer who has years of experience working on Spring framework. When I asked about implementing a class of Singleton pattern from scratch just like above, he/she stucked and kept mentioning that Spring is using singleton that will feed them beans as singleton on the fly, and he/she doesn’t need to implement it. This actually just remind me that when I’ve been working on top of a certain framework for so long, that I’m in my comfort zone and quite easily getting into the habit of not thinking how it was implemented under the hood, and this is definitely not helpful for the professional growth.</p>
+</blockquote>
+
+<h2 id="factory">Factory</h2>
+
+<h2 id="abstract-factory">Abstract Factory</h2>
+
+<h2 id="builder">Builder</h2>
+
+<h2 id="prototype">Prototype</h2>
+
+<h1 id="structural-design-pattern">Structural Design Pattern</h1>
+
+<p>There are seven of them, to memorize, remember <code class="language-plaintext highlighter-rouge">ABCD + PFF</code>:</p>
+
+<h2 id="adapter">Adapter</h2>
+
+<h2 id="bridge">Bridge</h2>
+
+<h2 id="composite">Composite</h2>
+
+<h2 id="decorator">Decorator</h2>
+
+<h2 id="proxy">Proxy</h2>
+
+<h2 id="facade">Facade</h2>
+
+<h2 id="flyweight">Flyweight</h2>
+
+<h1 id="behavioral-design-pattern">Behavioral Design Pattern</h1>
+
+<p>There are eleven of them, to memorise, remember <code class="language-plaintext highlighter-rouge">Double MISC + VOT</code>.</p>
+
+<h2 id="mediator">Mediator</h2>
+
+<h2 id="memento">Memento</h2>
+
+<h2 id="intepretor">Intepretor</h2>
+
+<h2 id="iterator">Iterator</h2>
+
+<h2 id="strategy">Strategy</h2>
+
+<h2 id="state">State</h2>
+
+<h2 id="chain-of-responsibility">Chain of Responsibility</h2>
+
+<h2 id="command">Command</h2>
+
+<h2 id="visitor">Visitor</h2>
+
+<h2 id="observer">Observer</h2>
+
+<h2 id="template-methods">Template Methods</h2>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-07-22T00:00:00+01:00">July 22, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=The+23+Gang+Of+Four+Design+Patterns%20https%3A%2F%2Fchenxiangtech.github.io%2FThe-23-Gang-of-Four-Design-Patterns%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchenxiangtech.github.io%2FThe-23-Gang-of-Four-Design-Patterns%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchenxiangtech.github.io%2FThe-23-Gang-of-Four-Design-Patterns%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/Professionalism-Starts-With-Taking-Responsibility/" class="pagination--pager" title="Professionalism Starts With Taking Responsibility
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Professionalism-Starts-With-Taking-Responsibility/" rel="permalink">Professionalism Starts With Taking Responsibility
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">I recently read the book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programme...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Xiang Chen. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

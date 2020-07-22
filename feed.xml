@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-22T11:43:14+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Continuous Learning and Sharing</title><subtitle>A blog site for continuous learning and sharing.</subtitle><author><name>Xiang Chen</name></author><entry><title type="html">Clean Coder Review Professionalism</title><link href="http://localhost:4000/Clean-Coder-Review-Professionalism/" rel="alternate" type="text/html" title="Clean Coder Review Professionalism" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>http://localhost:4000/Clean-Coder-Review-Professionalism</id><content type="html" xml:base="http://localhost:4000/Clean-Coder-Review-Professionalism/">&lt;p&gt;I recently read this book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programmers.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-22T12:02:06+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Continuous Learning and Sharing</title><subtitle>A blog site for continuous learning and sharing.</subtitle><author><name>Xiang Chen</name></author><entry><title type="html">Clean Coder Review Professionalism</title><link href="http://localhost:4000/Clean-Coder-Review-Professionalism/" rel="alternate" type="text/html" title="Clean Coder Review Professionalism" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>http://localhost:4000/Clean-Coder-Review-Professionalism</id><content type="html" xml:base="http://localhost:4000/Clean-Coder-Review-Professionalism/">&lt;p&gt;I recently read this book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programmers.&lt;/p&gt;
 
 &lt;p&gt;To me, the experience of reading this book is quite special, I felt being taken under the wings and mentored throughout the book.&lt;/p&gt;
 
@@ -29,24 +29,31 @@
 
 &lt;p&gt;&lt;em&gt;He was not sure how long he needed to fix the error etc, and on the other end the rolled back feature is also critical, well you know the rest…&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;*He confessed that he only cared about his reputation and should have told the PM that the delivery is not fully tested and see if the date can be pushed till the tests are fully done, and that was an irresponsible behavior for the shipment quality.&lt;/p&gt;
+&lt;p&gt;He confessed that he only cared about his reputation and should have told the PM that the delivery is not fully tested and see if the date can be pushed till the tests are fully done, and that was an irresponsible behavior for the shipment quality.&lt;/p&gt;
 
-&lt;p&gt;I totally have been in the same scenarios,*&lt;/p&gt;
+&lt;p&gt;I totally have been in the same scenarios,&lt;/p&gt;
 
-&lt;p&gt;“Just commit it, we can make it pretty later!”&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Just commit it, we can make it pretty later!&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;“The tests failed, but it’s not related to my changes, can we merged it?”&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;The tests failed, but it’s not related to my changes, can we merged it?&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;“Let’s just develop it and test the happy path, QA can test and let us know if any issue later”. 
- It’s quite tempted for developers to take shortcut to a workable software, and skip certain tedious steps, such as testing, documentation, I have to confess I’m one of them.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Let’s just develop it and test the happy path, QA can test and let us know if any issue later.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It’s quite tempted for developers to take shortcut to a workable software, and skip certain tedious steps, such as testing, documentation, I have to confess I’m one of them.&lt;/p&gt;
 
 &lt;p&gt;As a client facing consultant we’ll always face even more pressure from the project, customer, so the temptation is huge and this won’t be easy, and who said this will be easy?&lt;/p&gt;
 
 &lt;p&gt;There are probably related topics jumping in our head to aid this kind of issues, like Definition of Done, Acceptance Criteria etc, but these are process related and can be passively enforced onto an individual.&lt;/p&gt;
 
-&lt;p&gt;Here we are trying to talk about people.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Here we are trying to talk about people.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;As per the first value of Agile Manifesto, that People over Process and Tools, that without People having the right mindset, the process can be tilted when facing difficulties.&lt;/p&gt;
+&lt;p&gt;As per the first value of Agile Manifesto, that &lt;strong&gt;People over Process and Tools&lt;/strong&gt;, that without People having the right mindset, the process can be tilted when facing difficulties.&lt;/p&gt;
 
 &lt;p&gt;So as a professional, the mindset should be to extend our responsibility to a higher level, e.g.:&lt;/p&gt;
 
@@ -58,4 +65,6 @@
   &lt;li&gt;Responsible to the Sustaining     Engineer who is going to jump on Midnight calls if our code causes     defects;&lt;/li&gt;
   &lt;li&gt;Responsible to the End User     who is going to use our code – Bear in mind this feature could be a big     impact to a lot of people’s daily life;&lt;/li&gt;
   &lt;li&gt;Responsible to the Customer     who is trying to be profitable with our code – Don’t make them lose     business because of service unavailable or defects.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xiang Chen</name></author><summary type="html">I recently read this book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programmers.</summary></entry></feed>
+&lt;/ul&gt;
+
+&lt;p&gt;In this world which has been broadly digitallized, every thing we touch day to day are constructed by lines of codes. This can be your bills, your car, your hospital device etc. We are the developers behind these code, we put if/else statements in this mission critical functions. The sense of responsibility is a minimum ask for us.&lt;/p&gt;</content><author><name>Xiang Chen</name></author><summary type="html">I recently read this book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programmers.</summary></entry></feed>

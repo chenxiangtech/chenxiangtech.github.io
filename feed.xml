@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="https://chenxiangtech.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chenxiangtech.github.io/" rel="alternate" type="text/html" /><updated>2020-07-22T14:14:38+01:00</updated><id>https://chenxiangtech.github.io/feed.xml</id><title type="html">Continuous Learning and Sharing</title><subtitle>A blog site for continuous learning and sharing.</subtitle><author><name>Xiang Chen</name></author><entry><title type="html">Professionalism Starts With Taking Responsibility</title><link href="https://chenxiangtech.github.io/Professionalism-Starts-With-Taking-Responsibility/" rel="alternate" type="text/html" title="Professionalism Starts With Taking Responsibility" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/Professionalism-Starts-With-Taking-Responsibility</id><content type="html" xml:base="https://chenxiangtech.github.io/Professionalism-Starts-With-Taking-Responsibility/">&lt;p&gt;I recently read this book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programmers.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="https://chenxiangtech.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chenxiangtech.github.io/" rel="alternate" type="text/html" /><updated>2020-07-22T15:24:05+01:00</updated><id>https://chenxiangtech.github.io/feed.xml</id><title type="html">Continuous Learning and Sharing</title><subtitle>A blog site for continuous learning and sharing.</subtitle><author><name>Xiang Chen</name></author><entry><title type="html">Professionalism Starts With Taking Responsibility</title><link href="https://chenxiangtech.github.io/Professionalism-Starts-With-Taking-Responsibility/" rel="alternate" type="text/html" title="Professionalism Starts With Taking Responsibility" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/Professionalism-Starts-With-Taking-Responsibility</id><content type="html" xml:base="https://chenxiangtech.github.io/Professionalism-Starts-With-Taking-Responsibility/">&lt;p&gt;I recently read the book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programmers.&lt;/p&gt;
 
 &lt;p&gt;To me, the experience of reading this book is quite special, I felt being taken under the wings and mentored throughout the book.&lt;/p&gt;
 
@@ -18,16 +18,17 @@
   &lt;p&gt;Not everyone can be called professional, be careful what you ask for.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Not everyone who can put code together and make it “work” can be called professional.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Not everyone who can put code together and make it “work” can be called professional.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;Take Responsibility&lt;/strong&gt; 
- In this section, Uncle Bob has shared experience he had, that he once had to ship something not fully tested due to time pressure, and caused severe impact on the customer.&lt;/p&gt;
+&lt;h2 id=&quot;take-responsibility&quot;&gt;Take Responsibility&lt;/h2&gt;
+&lt;p&gt;In this section, Uncle Bob has shared experience he had, that he once had to ship something not fully tested due to time pressure, and caused severe impact on the customer.
+He only tested his new features, but didn’t fully regression test the other part of the system where he believed things should be fine. And guess what, Murphy’s law shined again.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;He only tested his new features, but didn’t fully regression test the other part of the system where he believed things should be fine. And guess what, Murphy’s law shined again.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The system is done as soon as his new feature rolled out, and customers are losing tons of critical data for one day and had roll back the system. His manager was roasted on constant phone from the customer.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;The system is done as soon as his new feature rolled out, and customers are losing tons of critical data for one day and had roll back the system. His manager was roasted on constant phone from the customer.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;He was not sure how long he needed to fix the error etc, and on the other end the rolled back feature is also critical, well you know the rest…&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;He was not sure how long he needed to fix the error etc, and on the other end the rolled back feature is also critical, well you know the rest…&lt;/p&gt;
 
 &lt;p&gt;He confessed that he only cared about his reputation and should have told the PM that the delivery is not fully tested and see if the date can be pushed till the tests are fully done, and that was an irresponsible behavior for the shipment quality.&lt;/p&gt;
 
@@ -67,4 +68,4 @@
   &lt;li&gt;Responsible to the Customer     who is trying to be profitable with our code – Don’t make them lose     business because of service unavailable or defects.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In this world which has been broadly digitallized, every thing we touch day to day are constructed by lines of codes. This can be your bills, your car, your hospital device etc. We are the developers behind these code, we put if/else statements in this mission critical functions. The sense of responsibility is a minimum ask for us.&lt;/p&gt;</content><author><name>Xiang Chen</name></author><summary type="html">I recently read this book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programmers.</summary></entry></feed>
+&lt;p&gt;In this world which has been broadly digitallized, every thing we touch day to day are constructed by lines of codes. This can be your bills, your car, your hospital device etc. We are the developers behind these code, we put if/else statements in this mission critical functions. The sense of responsibility is a minimum ask for us.&lt;/p&gt;</content><author><name>Xiang Chen</name></author><summary type="html">I recently read the book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programmers.</summary></entry></feed>

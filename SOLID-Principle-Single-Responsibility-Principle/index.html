@@ -341,18 +341,20 @@
   <span class="o">}</span>
   
   <span class="kd">private</span> <span class="kt">int</span> <span class="nf">getRegularHours</span><span class="o">()</span> <span class="o">{</span>
-    <span class="c1">// Based on Don't Repeat Yourself principle, the method here is a shared private function</span>
-    <span class="c1">// used by both calcuatePay() and reportHours(), starting with a simple logic, </span>
-    <span class="c1">// say, calculate all the regular hours of regular work days.</span>
+    <span class="cm">/*
+    Based on Don't Repeat Yourself principle, the method here is a shared private function
+    used by both calcuatePay() and reportHours(), starting with a simple logic, 
+    say, calculate all the regular hours of regular work days.
     
-    <span class="c1">// Now here is the tricky situation:</span>
-    <span class="c1">// What if the HR Department wants to change how this is calculated,</span>
-    <span class="c1">// while Financial Department want to stay the same?</span>
+    Now here is the tricky situation:
+    What if the HR Department wants to change how this is calculated,
+    while Financial Department want to stay the same?
     
-    <span class="c1">// In real life, this is what happens:</span>
-    <span class="c1">// Developer from HR Department makes the change, and test everything with HR's signoff.</span>
-    <span class="c1">// After several days, the Financial Department discovered this change, because</span>
-    <span class="c1">// They are overpaying millions of dollars...</span>
+    In real life, this is what happens:
+    Developer from HR Department makes the change, and test everything with HR's signoff.
+    After several days, the Financial Department discovered this change, because
+    They are overpaying millions of dollars...
+    */</span>
   <span class="o">}</span>
   
   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">()</span> <span class="o">{</span>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="https://chenxiangtech.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chenxiangtech.github.io/" rel="alternate" type="text/html" /><updated>2020-08-02T22:50:14+01:00</updated><id>https://chenxiangtech.github.io/feed.xml</id><title type="html">Continuous Learning and Sharing</title><subtitle>A blog site for continuous learning and sharing.</subtitle><author><name>Xiang Chen</name></author><entry><title type="html">Design Pattern 1 Singleton</title><link href="https://chenxiangtech.github.io/Design-Pattern-1-Singleton/" rel="alternate" type="text/html" title="Design Pattern 1 Singleton" /><published>2020-08-01T00:00:00+01:00</published><updated>2020-08-01T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/Design-Pattern-1-Singleton</id><content type="html" xml:base="https://chenxiangtech.github.io/Design-Pattern-1-Singleton/">&lt;p&gt;&lt;strong&gt;Singleton&lt;/strong&gt; probably is the most referred, and seen design pattern.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="https://chenxiangtech.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chenxiangtech.github.io/" rel="alternate" type="text/html" /><updated>2020-08-02T22:54:29+01:00</updated><id>https://chenxiangtech.github.io/feed.xml</id><title type="html">Continuous Learning and Sharing</title><subtitle>A blog site for continuous learning and sharing.</subtitle><author><name>Xiang Chen</name></author><entry><title type="html">Design Pattern 1 Singleton</title><link href="https://chenxiangtech.github.io/Design-Pattern-1-Singleton/" rel="alternate" type="text/html" title="Design Pattern 1 Singleton" /><published>2020-08-01T00:00:00+01:00</published><updated>2020-08-01T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/Design-Pattern-1-Singleton</id><content type="html" xml:base="https://chenxiangtech.github.io/Design-Pattern-1-Singleton/">&lt;p&gt;&lt;strong&gt;Singleton&lt;/strong&gt; probably is the most referred, and seen design pattern.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Summarized in one sentence, there will one and only one initialized instance in the runtime environment.&lt;/strong&gt;&lt;/p&gt;
 
@@ -374,18 +374,20 @@
   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
   
   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getRegularHours&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Based on Don't Repeat Yourself principle, the method here is a shared private function&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// used by both calcuatePay() and reportHours(), starting with a simple logic, &lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// say, calculate all the regular hours of regular work days.&lt;/span&gt;
+    &lt;span class=&quot;cm&quot;&gt;/*
+    Based on Don't Repeat Yourself principle, the method here is a shared private function
+    used by both calcuatePay() and reportHours(), starting with a simple logic, 
+    say, calculate all the regular hours of regular work days.
     
-    &lt;span class=&quot;c1&quot;&gt;// Now here is the tricky situation:&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// What if the HR Department wants to change how this is calculated,&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// while Financial Department want to stay the same?&lt;/span&gt;
+    Now here is the tricky situation:
+    What if the HR Department wants to change how this is calculated,
+    while Financial Department want to stay the same?
     
-    &lt;span class=&quot;c1&quot;&gt;// In real life, this is what happens:&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Developer from HR Department makes the change, and test everything with HR's signoff.&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// After several days, the Financial Department discovered this change, because&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// They are overpaying millions of dollars...&lt;/span&gt;
+    In real life, this is what happens:
+    Developer from HR Department makes the change, and test everything with HR's signoff.
+    After several days, the Financial Department discovered this change, because
+    They are overpaying millions of dollars...
+    */&lt;/span&gt;
   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
   
   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;

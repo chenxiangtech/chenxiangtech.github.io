@@ -1,0 +1,601 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.3 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Solid Principle   Single Responsibility Principle - Continuous Learning and Sharing</title>
+<meta name="description" content="Single Responsibility Principle is a very easy but also confusing principle, that we may easily thought we’ve got it but actually we only did partially. We may have interpreted it as:">
+
+
+  <meta name="author" content="Xiang Chen">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Continuous Learning and Sharing">
+<meta property="og:title" content="Solid Principle   Single Responsibility Principle">
+<meta property="og:url" content="https://chenxiangtech.github.io/SOLID-Principle-Single-Responsibility-Principle/">
+
+
+  <meta property="og:description" content="Single Responsibility Principle is a very easy but also confusing principle, that we may easily thought we’ve got it but actually we only did partially. We may have interpreted it as:">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-07-21T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://chenxiangtech.github.io/SOLID-Principle-Single-Responsibility-Principle/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Xiang Chen",
+      "url": "https://chenxiangtech.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Continuous Learning and Sharing Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Continuous Learning and Sharing
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/profile_pic.jpeg" alt="Xiang Chen" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Xiang Chen</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Full Stack Software Engineer, Consulting Lead, Certified Scrum Master, Career Coach</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Dublin, Shenzhen</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:chenxiang1984@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/xiang-chen-05161924/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span></a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://twitter.com/gnaixnehc" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Solid Principle   Single Responsibility Principle">
+    <meta itemprop="description" content="Single Responsibility Principle is a very easy but also confusing principle, that we may easily thought we’ve got it but actually we only did partially. We may have interpreted it as:">
+    <meta itemprop="datePublished" content="2020-07-21T00:00:00+01:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Solid Principle   Single Responsibility Principle
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><strong>Single Responsibility Principle</strong> is a very easy but also confusing principle, that we may easily thought we’ve got it but actually we only did partially. We may have interpreted it as:</p>
+
+<blockquote>
+  <p>Each Module should just do one thing.</p>
+</blockquote>
+
+<p>I have to confess, that’s how I understood it at the beginning. There is nothing wrong with this understanding, in fact it complies with the concept of designing modules to be <strong>Highly Conhesive, and Loosely Coupled</strong>. However, it’s hard to understand why is this principle important, and what happens if you violate it.</p>
+
+<p>Here comes the other definition of SRP which is popular on the internet, but doesn’t make much sense when I read it.</p>
+
+<blockquote>
+  <p>Each module should have one, and only one, reason to change.</p>
+</blockquote>
+
+<p>What does this definition has any relationship with the word “Responsiblity”? At least for me, I don’t find a clue. So try another one:</p>
+
+<blockquote>
+  <p>Each module should be responsible to one, and only one, actor.</p>
+</blockquote>
+
+<p>Actor is a group of users or stakeholders who requires this module, and demand changes in the same way.</p>
+
+<p>Now, I feel that’s much better to understand and articulate. I got this definition from Robert Martin’s book “Clean Architecture”, and I’m going to use his example in the book to illustrate this principle.</p>
+
+<p><strong>Example of SRP Violation:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">calcuatePay</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Financial Department use this function to calculate pay.</span>
+    <span class="o">...</span>
+    <span class="n">getRegularHours</span><span class="o">()</span> <span class="c1">// To calculate the pay</span>
+    <span class="o">...</span>
+  <span class="o">}</span>
+  
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">reportHours</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// HR Department require this</span>
+    <span class="o">...</span>
+    <span class="n">getRegularHours</span><span class="o">()</span> <span class="c1">// To report hours</span>
+    <span class="o">...</span>
+  <span class="o">}</span>
+  
+  <span class="kd">private</span> <span class="kt">int</span> <span class="nf">getRegularHours</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Based on Don't Repeat Yourself principle, the method here is a shared private function</span>
+    <span class="c1">// used by both calcuatePay() and reportHours(), starting with a simple logic, </span>
+    <span class="c1">// say, calculate all the regular hours of regular work days.</span>
+    
+    <span class="c1">// Now here is the tricky situation:</span>
+    <span class="c1">// What if the HR Department wants to change how this is calculated,</span>
+    <span class="c1">// while Financial Department want to stay the same?</span>
+    
+    <span class="c1">// In real life, this is what happens:</span>
+    <span class="c1">// Developer from HR Department makes the change, and test everything with HR's signoff.</span>
+    <span class="c1">// After several days, the Financial Department discovered this change, because</span>
+    <span class="c1">// They are overpaying millions of dollars...</span>
+  <span class="o">}</span>
+  
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// A common method to persist this record, you can say DBA requires this.</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>As illustrated above, if there are multiple actors depending on a module, they could be affected by one single change without even knowing it. This is an example of deeply coupled code. This makes code change or refactoring extremely risky and hard, and normally people just lose the courage to do so.</p>
+
+<p>The fix is to extract the function for each actor and make a module for itself. And the developer from each department only needs to change the module they are responsible, without unnecessary code conflict or risky knockon effect.</p>
+
+<p>I’d like to end this post with the responsibility of a good architect:</p>
+
+<ul>
+  <li>Make the system easy to change and maintain.</li>
+  <li>Increase the productivity of each developer</li>
+  <li>Reduce the overall cost by achieveing the above two.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-07-21T00:00:00+01:00">July 21, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Solid+Principle+++Single+Responsibility+Principle%20https%3A%2F%2Fchenxiangtech.github.io%2FSOLID-Principle-Single-Responsibility-Principle%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchenxiangtech.github.io%2FSOLID-Principle-Single-Responsibility-Principle%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchenxiangtech.github.io%2FSOLID-Principle-Single-Responsibility-Principle%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/No-boundaries/" class="pagination--pager" title="No Boundaries
+">Previous</a>
+    
+    
+      <a href="/The-23-Gang-of-Four-Design-Patterns/" class="pagination--pager" title="The 23 Gang Of Four Design Patterns
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Design-Pattern-1-Singleton/" rel="permalink">Design Pattern 1 Singleton
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Singleton probably is the most referred, and seen design pattern.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/The-23-Gang-of-Four-Design-Patterns/" rel="permalink">The 23 Gang Of Four Design Patterns
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Work In Progress
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/No-boundaries/" rel="permalink">No Boundaries
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">I recently was updating my Linkedin profile, and therefore received several phone calls from some recruiters.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Professionalism-Starts-With-Responsibility/" rel="permalink">Professionalism Starts With Responsibility
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">I recently read the book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programme...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Xiang Chen. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

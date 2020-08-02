@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="https://chenxiangtech.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chenxiangtech.github.io/" rel="alternate" type="text/html" /><updated>2020-08-02T15:14:15+01:00</updated><id>https://chenxiangtech.github.io/feed.xml</id><title type="html">Continuous Learning and Sharing</title><subtitle>A blog site for continuous learning and sharing.</subtitle><author><name>Xiang Chen</name></author><entry><title type="html">Design Pattern 1 Singleton</title><link href="https://chenxiangtech.github.io/Design-Pattern-1-Singleton/" rel="alternate" type="text/html" title="Design Pattern 1 Singleton" /><published>2020-08-01T00:00:00+01:00</published><updated>2020-08-01T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/Design-Pattern-1-Singleton</id><content type="html" xml:base="https://chenxiangtech.github.io/Design-Pattern-1-Singleton/">&lt;p&gt;&lt;strong&gt;Singleton&lt;/strong&gt; probably is the most referred, and seen design pattern.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="https://chenxiangtech.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chenxiangtech.github.io/" rel="alternate" type="text/html" /><updated>2020-08-02T22:50:14+01:00</updated><id>https://chenxiangtech.github.io/feed.xml</id><title type="html">Continuous Learning and Sharing</title><subtitle>A blog site for continuous learning and sharing.</subtitle><author><name>Xiang Chen</name></author><entry><title type="html">Design Pattern 1 Singleton</title><link href="https://chenxiangtech.github.io/Design-Pattern-1-Singleton/" rel="alternate" type="text/html" title="Design Pattern 1 Singleton" /><published>2020-08-01T00:00:00+01:00</published><updated>2020-08-01T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/Design-Pattern-1-Singleton</id><content type="html" xml:base="https://chenxiangtech.github.io/Design-Pattern-1-Singleton/">&lt;p&gt;&lt;strong&gt;Singleton&lt;/strong&gt; probably is the most referred, and seen design pattern.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Summarized in one sentence, there will one and only one initialized instance in the runtime environment.&lt;/strong&gt;&lt;/p&gt;
 
@@ -315,7 +315,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I’ve been reading their stories and documentories, and these fellows have impacted the life of millions of developers, and they don’t come from a typical Computer Science background.&lt;/p&gt;
+&lt;p&gt;I’ve been reading their stories and documentories, and these fellows have impacted the life of millions of developers, and I can’t even call them developers if I only know the education path.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;This made me think if we are letting our Education Path define who we are and limit we can or we should do?&lt;/strong&gt;&lt;/p&gt;
 
@@ -326,9 +326,85 @@
     &lt;p&gt;Don’t let your education background, work experience limit who you are and what you want to explore.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Don’t use these categories as the only criteria to judge others’ potential.&lt;/p&gt;
+    &lt;p&gt;Don’t use these categories as the only criteria to analysis others’ potential.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Xiang Chen</name></author><summary type="html">I recently was updating my Linkedin profile, and therefore received several phone calls from some recruiters.</summary></entry><entry><title type="html">Professionalism Starts With Responsibility</title><link href="https://chenxiangtech.github.io/Professionalism-Starts-With-Responsibility/" rel="alternate" type="text/html" title="Professionalism Starts With Responsibility" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/Professionalism-Starts-With-Responsibility</id><content type="html" xml:base="https://chenxiangtech.github.io/Professionalism-Starts-With-Responsibility/">&lt;p&gt;I recently read the book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programmers.&lt;/p&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This probably perfectly callback the key essense of a scrum developer, who need to be Cross Functional.&lt;/p&gt;
+
+&lt;p&gt;There, that’s my gentle reminder for myself today.&lt;/p&gt;</content><author><name>Xiang Chen</name></author><summary type="html">I recently was updating my Linkedin profile, and therefore received several phone calls from some recruiters.</summary></entry><entry><title type="html">Solid Principle Single Responsibility Principle</title><link href="https://chenxiangtech.github.io/SOLID-Principle-Single-Responsibility-Principle/" rel="alternate" type="text/html" title="Solid Principle   Single Responsibility Principle" /><published>2020-07-21T00:00:00+01:00</published><updated>2020-07-21T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/SOLID-Principle---Single-Responsibility-Principle</id><content type="html" xml:base="https://chenxiangtech.github.io/SOLID-Principle-Single-Responsibility-Principle/">&lt;p&gt;&lt;strong&gt;Single Responsibility Principle&lt;/strong&gt; is a very easy but also confusing principle, that we may easily thought we’ve got it but actually we only did partially. We may have interpreted it as:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Each Module should just do one thing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I have to confess, that’s how I understood it at the beginning. There is nothing wrong with this understanding, in fact it complies with the concept of designing modules to be &lt;strong&gt;Highly Conhesive, and Loosely Coupled&lt;/strong&gt;. However, it’s hard to understand why is this principle important, and what happens if you violate it.&lt;/p&gt;
+
+&lt;p&gt;Here comes the other definition of SRP which is popular on the internet, but doesn’t make much sense when I read it.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Each module should have one, and only one, reason to change.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What does this definition has any relationship with the word “Responsiblity”? At least for me, I don’t find a clue. So try another one:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Each module should be responsible to one, and only one, actor.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Actor is a group of users or stakeholders who requires this module, and demand changes in the same way.&lt;/p&gt;
+
+&lt;p&gt;Now, I feel that’s much better to understand and articulate. I got this definition from Robert Martin’s book “Clean Architecture”, and I’m going to use his example in the book to illustrate this principle.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example of SRP Violation:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;calcuatePay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Financial Department use this function to calculate pay.&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;getRegularHours&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// To calculate the pay&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;reportHours&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// HR Department require this&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;getRegularHours&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// To report hours&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getRegularHours&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Based on Don't Repeat Yourself principle, the method here is a shared private function&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// used by both calcuatePay() and reportHours(), starting with a simple logic, &lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// say, calculate all the regular hours of regular work days.&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;// Now here is the tricky situation:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// What if the HR Department wants to change how this is calculated,&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// while Financial Department want to stay the same?&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;// In real life, this is what happens:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Developer from HR Department makes the change, and test everything with HR's signoff.&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// After several days, the Financial Department discovered this change, because&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// They are overpaying millions of dollars...&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// A common method to persist this record, you can say DBA requires this.&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As illustrated above, if there are multiple actors depending on a module, they could be affected by one single change without even knowing it. This is an example of deeply coupled code. This makes code change or refactoring extremely risky and hard, and normally people just lose the courage to do so.&lt;/p&gt;
+
+&lt;p&gt;The fix is to extract the function for each actor and make a module for itself. And the developer from each department only needs to change the module they are responsible, without unnecessary code conflict or risky knockon effect.&lt;/p&gt;
+
+&lt;p&gt;I’d like to end this post with the responsibility of a good architect:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make the system easy to change and maintain.&lt;/li&gt;
+  &lt;li&gt;Increase the productivity of each developer&lt;/li&gt;
+  &lt;li&gt;Reduce the overall cost by achieveing the above two.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xiang Chen</name></author><summary type="html">Single Responsibility Principle is a very easy but also confusing principle, that we may easily thought we’ve got it but actually we only did partially. We may have interpreted it as:</summary></entry><entry><title type="html">Professionalism Starts With Responsibility</title><link href="https://chenxiangtech.github.io/Professionalism-Starts-With-Responsibility/" rel="alternate" type="text/html" title="Professionalism Starts With Responsibility" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/Professionalism-Starts-With-Responsibility</id><content type="html" xml:base="https://chenxiangtech.github.io/Professionalism-Starts-With-Responsibility/">&lt;p&gt;I recently read the book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programmers.&lt;/p&gt;
 
 &lt;p&gt;To me, the experience of reading this book is quite special, I felt being taken under the wings and mentored throughout the book.&lt;/p&gt;
 

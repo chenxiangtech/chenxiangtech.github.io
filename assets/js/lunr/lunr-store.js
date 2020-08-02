@@ -11,6 +11,12 @@ var store = [{
         "url": "https://chenxiangtech.github.io/No-boundaries/",
         "teaser": null
       },{
+        "title": "Solid Principle   Single Responsibility Principle",
+        "excerpt":"Single Responsibility Principle is a very easy but also confusing principle, that we may easily thought we’ve got it but actually we only did partially. We may have interpreted it as: Each Module should just do one thing. I have to confess, that’s how I understood it at the beginning....","categories": [],
+        "tags": [],
+        "url": "https://chenxiangtech.github.io/SOLID-Principle-Single-Responsibility-Principle/",
+        "teaser": null
+      },{
         "title": "The 23 Gang Of Four Design Patterns",
         "excerpt":"Work In Progress The 23 Gang of Four Design Patterns have been refered as must known for every technical professional. I’m going to document my understanding on these patterns, as I notice that for some of them there might be different interpretations which all make good sense. So the goal...","categories": [],
         "tags": [],

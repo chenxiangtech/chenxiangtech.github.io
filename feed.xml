@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="https://chenxiangtech.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chenxiangtech.github.io/" rel="alternate" type="text/html" /><updated>2020-08-02T15:11:53+01:00</updated><id>https://chenxiangtech.github.io/feed.xml</id><title type="html">Continuous Learning and Sharing</title><subtitle>A blog site for continuous learning and sharing.</subtitle><author><name>Xiang Chen</name></author><entry><title type="html">The 23 Gang Of Four Design Patterns</title><link href="https://chenxiangtech.github.io/The-23-Gang-of-Four-Design-Patterns/" rel="alternate" type="text/html" title="The 23 Gang Of Four Design Patterns" /><published>2020-07-22T00:00:00+01:00</published><updated>2020-07-22T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/The-23-Gang-of-Four-Design-Patterns</id><content type="html" xml:base="https://chenxiangtech.github.io/The-23-Gang-of-Four-Design-Patterns/">&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Work In Progress&lt;/code&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="https://chenxiangtech.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chenxiangtech.github.io/" rel="alternate" type="text/html" /><updated>2020-08-02T15:14:15+01:00</updated><id>https://chenxiangtech.github.io/feed.xml</id><title type="html">Continuous Learning and Sharing</title><subtitle>A blog site for continuous learning and sharing.</subtitle><author><name>Xiang Chen</name></author><entry><title type="html">Design Pattern 1 Singleton</title><link href="https://chenxiangtech.github.io/Design-Pattern-1-Singleton/" rel="alternate" type="text/html" title="Design Pattern 1 Singleton" /><published>2020-08-01T00:00:00+01:00</published><updated>2020-08-01T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/Design-Pattern-1-Singleton</id><content type="html" xml:base="https://chenxiangtech.github.io/Design-Pattern-1-Singleton/">&lt;p&gt;&lt;strong&gt;Singleton&lt;/strong&gt; probably is the most referred, and seen design pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Summarized in one sentence, there will one and only one initialized instance in the runtime environment.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pros&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There will be only one initialized object in the memory, obviously this will save memory space.&lt;/p&gt;
+
+&lt;p&gt;On top of that, in the scenario where initialization is very costly, such as IO operations like estabilish DB connection, or CPU comsumption such as costly computing operation, Singleton will be a very useful design.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Catch or Cons&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Because this single instance is shared by multiple functions, consideration need to put towards:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Does the function depend on the state of the object?&lt;/li&gt;
+  &lt;li&gt;Is the object safe to be used in a multithread environment?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Further more, if the developer wants to use lazy load, then the consideration of concurrency is very important.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If I find a a good candidate when I conducted a techincal interview, I’d like to ask him or her to implement a Singleton from scratch, as it’s testing some basic Java knowledge such a private constructor, or you can dig deeper towards multithreading such as synchoronized and volatile etc.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Here is an example with basic implementation:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  
+  &lt;span class=&quot;c1&quot;&gt;// Private constructor makes sure it cannot be instantiated anywhere else&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt;
+  
+  &lt;span class=&quot;c1&quot;&gt;//Lazy loading&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_instance&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_instance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There will be problems if the code above is running in multi-threading environments.&lt;/p&gt;
+
+&lt;p&gt;So Double Checked Locking is introduce:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;cm&quot;&gt;/* The usage of volatile:
+   1. Provide Data visiblity between threads;
+   2. When CPU executes the instructions, JVM will utilize memory fence around this object and making sure there is no reordering of instructions which may lead to partially initizliaed object.
+   */&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;volatile&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Singleton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt;
+  
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Double Checked Locking&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 1. Check if it's initialized, no need to synchrozied at this step&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;synchronized&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 2. After obtaining the lock, check again, and make sure it's not initizlied by other thread in between the previous steps.&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_instance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There are other ways to implementation on this, but I think the most important thing is the concept of this pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Singleton in Action with the Spring framework&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In the Spring framework, there is a core container called the Inversion of Control.&lt;/p&gt;
+
+&lt;p&gt;By default, a bean managed by the container is instantiated as a singleton instance, if not specified otherwise.&lt;/p&gt;
+
+&lt;p&gt;IoC takes over the management of initilization of these objects, called beans, from the implementation classes.&lt;/p&gt;
+
+&lt;p&gt;In this way, it decouples the implemenation from the detailed initilization, and focus on Interface Oriented Implementation.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;A few more thoughts&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;I once interviewed a senior developer who has years of experience working on Spring framework. When I asked about implementing a class of Singleton pattern from scratch just like above, he/she stucked and kept mentioning that Spring is using singleton that will feed them beans as singleton on the fly, and he/she doesn’t need to implement it. This actually just remind me that when I’ve been working on top of a certain framework for so long, that I’m in my comfort zone and quite easily getting into the habit of not thinking how it was implemented under the hood, and this is definitely not helpful for the professional growth.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Xiang Chen</name></author><summary type="html">Singleton probably is the most referred, and seen design pattern.</summary></entry><entry><title type="html">The 23 Gang Of Four Design Patterns</title><link href="https://chenxiangtech.github.io/The-23-Gang-of-Four-Design-Patterns/" rel="alternate" type="text/html" title="The 23 Gang Of Four Design Patterns" /><published>2020-07-22T00:00:00+01:00</published><updated>2020-07-22T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/The-23-Gang-of-Four-Design-Patterns</id><content type="html" xml:base="https://chenxiangtech.github.io/The-23-Gang-of-Four-Design-Patterns/">&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Work In Progress&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;The 23 Gang of Four Design Patterns have been refered as must known for every technical professional.&lt;/p&gt;
 
@@ -242,93 +328,7 @@
   &lt;li&gt;
     &lt;p&gt;Don’t use these categories as the only criteria to judge others’ potential.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Xiang Chen</name></author><summary type="html">I recently was updating my Linkedin profile, and therefore received several phone calls from some recruiters.</summary></entry><entry><title type="html">Design Pattern 1 Singleton</title><link href="https://chenxiangtech.github.io/Design-Pattern-1-Singleton/" rel="alternate" type="text/html" title="Design Pattern 1 Singleton" /><published>2020-07-01T00:00:00+01:00</published><updated>2020-07-01T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/Design-Pattern-1-Singleton</id><content type="html" xml:base="https://chenxiangtech.github.io/Design-Pattern-1-Singleton/">&lt;p&gt;&lt;strong&gt;Singleton&lt;/strong&gt; probably is the most referred, and seen design pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Summarized in one sentence, there will one and only one initialized instance in the runtime environment.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Pros&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;There will be only one initialized object in the memory, obviously this will save memory space.&lt;/p&gt;
-
-&lt;p&gt;On top of that, in the scenario where initialization is very costly, such as IO operations like estabilish DB connection, or CPU comsumption such as costly computing operation, Singleton will be a very useful design.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Catch or Cons&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Because this single instance is shared by multiple functions, consideration need to put towards:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Does the function depend on the state of the object?&lt;/li&gt;
-  &lt;li&gt;Is the object safe to be used in a multithread environment?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Further more, if the developer wants to use lazy load, then the consideration of concurrency is very important.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;If I find a a good candidate when I conducted a techincal interview, I’d like to ask him or her to implement a Singleton from scratch, as it’s testing some basic Java knowledge such a private constructor, or you can dig deeper towards multithreading such as synchoronized and volatile etc.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Here is an example with basic implementation:&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;// Private constructor makes sure it cannot be instantiated anywhere else&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//Lazy loading&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_instance&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_instance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;There will be problems if the code above is running in multi-threading environments.&lt;/p&gt;
-
-&lt;p&gt;So Double Checked Locking is introduce:&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;cm&quot;&gt;/* The usage of volatile:
-   1. Provide Data visiblity between threads;
-   2. When CPU executes the instructions, JVM will utilize memory fence around this object and making sure there is no reordering of instructions which may lead to partially initizliaed object.
-   */&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;volatile&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Singleton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt;
-  
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Double Checked Locking&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 1. Check if it's initialized, no need to synchrozied at this step&lt;/span&gt;
-      &lt;span class=&quot;kd&quot;&gt;synchronized&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 2. After obtaining the lock, check again, and make sure it's not initizlied by other thread in between the previous steps.&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_instance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;There are other ways to implementation on this, but I think the most important thing is the concept of this pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Singleton in Action with the Spring framework&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;In the Spring framework, there is a core container called the Inversion of Control.&lt;/p&gt;
-
-&lt;p&gt;By default, a bean managed by the container is instantiated as a singleton instance, if not specified otherwise.&lt;/p&gt;
-
-&lt;p&gt;IoC takes over the management of initilization of these objects, called beans, from the implementation classes.&lt;/p&gt;
-
-&lt;p&gt;In this way, it decouples the implemenation from the detailed initilization, and focus on Interface Oriented Implementation.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;A few more thoughts&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;I once interviewed a senior developer who has years of experience working on Spring framework. When I asked about implementing a class of Singleton pattern from scratch just like above, he/she stucked and kept mentioning that Spring is using singleton that will feed them beans as singleton on the fly, and he/she doesn’t need to implement it. This actually just remind me that when I’ve been working on top of a certain framework for so long, that I’m in my comfort zone and quite easily getting into the habit of not thinking how it was implemented under the hood, and this is definitely not helpful for the professional growth.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Xiang Chen</name></author><summary type="html">Singleton probably is the most referred, and seen design pattern.</summary></entry><entry><title type="html">Professionalism Starts With Responsibility</title><link href="https://chenxiangtech.github.io/Professionalism-Starts-With-Responsibility/" rel="alternate" type="text/html" title="Professionalism Starts With Responsibility" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/Professionalism-Starts-With-Responsibility</id><content type="html" xml:base="https://chenxiangtech.github.io/Professionalism-Starts-With-Responsibility/">&lt;p&gt;I recently read the book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programmers.&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>Xiang Chen</name></author><summary type="html">I recently was updating my Linkedin profile, and therefore received several phone calls from some recruiters.</summary></entry><entry><title type="html">Professionalism Starts With Responsibility</title><link href="https://chenxiangtech.github.io/Professionalism-Starts-With-Responsibility/" rel="alternate" type="text/html" title="Professionalism Starts With Responsibility" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>https://chenxiangtech.github.io/Professionalism-Starts-With-Responsibility</id><content type="html" xml:base="https://chenxiangtech.github.io/Professionalism-Starts-With-Responsibility/">&lt;p&gt;I recently read the book “Clean Coder” from Robert C. Martin, who is also the author of “Clean Code” which someone may refer it as the bible of the programmers.&lt;/p&gt;
 
 &lt;p&gt;To me, the experience of reading this book is quite special, I felt being taken under the wings and mentored throughout the book.&lt;/p&gt;
 
